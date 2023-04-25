@@ -6,19 +6,18 @@ $('#submit').click(function(){
     let required = [name, email, phone];
 
     for (input of required){
-        if (input = ''){
+        if (input == ''){
             $('#message').text('Please Fill Out Required Fields').addClass('warning');
             input.prev('label').addClass('warning');
         }
         else {
-            input.prev('label').removeClass('warning');
+            $('label').removeClass('warning');
         }
         }
     if (!$('#label').hasClass('warning')){
         $('#form').remove();
         $('h2').text('Thanks for your feedback!');
     }
-
     }
 )
 });
