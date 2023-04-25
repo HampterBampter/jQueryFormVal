@@ -1,17 +1,17 @@
 $(document).ready(function(){
 $('#submit').click(function(){
-    let required = [name, email, phone];
-    let name = $('#name').valueOf();
+    let name = $('#name').val();
     let email = $('#email').val();
     let phone = $('#phone').val();
+    let required = [name, email, phone];
 
     for (input of required){
-        if (required.val = ('')){
+        if (input = ''){
             $('#message').text('Please Fill Out Required Fields').addClass('warning');
-            $('#mess').addClass('warning');
+            input.prev('label').addClass('warning');
         }
         else {
-            $('#mess').class.remove('warning');
+            input.prev('label').removeClass('warning');
         }
         }
     if (!$('#label').hasClass('warning')){
